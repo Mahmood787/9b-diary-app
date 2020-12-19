@@ -5,9 +5,12 @@ import { showAlert } from "../util";
 
 const http: AxiosInstance = axios.create({
   baseURL: "http://diaryappmahmood.surge.sh",
+  
+
 });
 
 http.defaults.headers.post["Content-Type"] = "application/json";
+
 
 http.interceptors.response.use(
   async (response: AxiosResponse) => {
