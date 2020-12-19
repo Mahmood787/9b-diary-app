@@ -29,7 +29,7 @@ const Auth: FC = () => {
     console.log(data)
     const path = isLogin ? '/auth/login' : '/auth/signup';
     http
-      .post<User, AuthResponse>(path, data)
+      .post<User, AuthResponse>(path, data,{withCredentials: false})
       .then((res) => {
         if (res) {
           const { user, token } = res;
