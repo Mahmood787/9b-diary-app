@@ -43,7 +43,7 @@ export const setupServer = (env?: string): Server => {
     },
 
     routes(): void {
-      this.urlPrefix = 'https://9b-diary-app.netlify.app/';
+      this.urlPrefix = 'http://diaryappmahmood.surge.sh/';
 
       this.get('/diaries/entries/:id', diary.getEntries);
       this.get('/diaries/:id', diary.getDiaries);
