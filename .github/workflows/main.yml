@@ -31,7 +31,7 @@ jobs:
       with:
         cmd: install
     - name: Build react app
-      run: yarn build
+      run: CI=false npm run build
     - name: Isntall surge
       run: npm install --global surge
     - name: Deploy surge
